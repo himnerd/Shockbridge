@@ -1,6 +1,6 @@
 # Shockbridge
 By HimnerdMC of HimnerdDEV
-
+** With help from the incredible Kodari.ai"#ad
 Shockbridge acts as a translator for Bedrock users to player Paper servers! 
 You may say "We already have that dumba**... Geyser..." 
 BUUUUUUUUUUT
