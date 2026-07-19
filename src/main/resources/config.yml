@@ -1,0 +1,57 @@
+shockbridge:
+  # ALPHA feature gate — nothing initializes unless true
+  alpha-enabled: false
+
+  # UDP listener bind settings
+  bind-address: "0.0.0.0"
+  bind-port: 19132
+
+  # MPSC queue capacity (power of 2 recommended)
+  queue-capacity: 8192
+
+  # Toggle nanosecond-resolution packet/buffer debug logging
+  debug-logging: false
+
+  # Maximum concurrent Bedrock sessions from a single IP
+  max-sessions-per-ip: 3
+
+  # Zlib compression threshold in bytes
+  compression-threshold: 256
+
+  # Exponential smoothing factor for Bedrock movement translation (0.0–1.0)
+  movement-smoothing-factor: 0.6
+
+  # Token-bucket rate limiter per remote address
+  rate-limit:
+    tokens: 200
+    refill-per-second: 100
+
+  # Resource pack conversion — converts Java server packs to Bedrock format
+  # "auto" reads from server.properties, or specify a URL/file path
+  resource-pack:
+    source: "auto"
+
+  # Java session injection — makes Bedrock players appear as Java to Paper/anticheats
+  # Requires online-mode=false OR BungeeCord IP forwarding enabled
+  injection:
+    use-bungee-forwarding: false
+
+  # Microsoft account authentication — validates Xbox Live identity chains
+  # Prevents spoofed Bedrock connections from impersonating other users
+  identity:
+    require-microsoft-auth: true
+
+  # Off-heap chunk cache for Bedrock clients
+  chunk-cache:
+    buffer-size-mb: 64
+    preload-radius: 3
+
+  # Per-client adaptive render distance based on ping/loss/hardware
+  render-distance:
+    min: 4
+    max: 16
+
+  # Native Bedrock camera shake and haptic feedback
+  haptics:
+    enabled: true
+    camera-shake-intensity: 1.0

@@ -1,0 +1,16 @@
+name: Shockbridge
+version: 0.1.0-ALPHA
+main: com.himnerd.shockbridge.ShockbridgePlugin
+api-version: '26.1'
+description: Ultra-performance embedded Bedrock-to-Java protocol bridge
+author: himnerd
+softdepend: [ViaVersion, ViaBackwards, ViaRewind]
+commands:
+  shockbridge:
+    description: Shockbridge administration
+    permission: shockbridge.admin
+    aliases: [sb]
+permissions:
+  shockbridge.admin:
+    description: Full Shockbridge administration
+    default: op

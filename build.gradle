@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.himnerd'
+version = '0.1.0-ALPHA'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://repo.viaversion.com' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:26.1.2.build.+-alpha'
+    compileOnly 'io.netty:netty-all:4.1.97.Final'
+    compileOnly 'com.viaversion:viaversion-api:5.2.1'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
